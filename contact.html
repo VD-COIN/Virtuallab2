@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact - Developer of Digital Comment System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(circle at top, #0f172a, #020617);
+    }
+
+    .glow-border {
+      box-shadow: 0 0 15px 3px rgba(255, 215, 0, 0.7), 0 0 30px 5px rgba(255, 215, 0, 0.5) inset;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      }
+      to {
+        box-shadow: 0 0 25px rgba(255, 215, 0, 1);
+      }
+    }
+  </style>
+  <script>
+    function copyPhone() {
+      navigator.clipboard.writeText("0993253633");
+      const tip = document.getElementById("copied-tip");
+      tip.classList.remove("hidden");
+      setTimeout(() => tip.classList.add("hidden"), 2000);
+    }
+  </script>
+</head>
+<body class="text-gray-100 min-h-screen">
+
+  <!-- Back Button -->
+  <div class="p-4">
+    <a href="home.html" class="inline-flex items-center text-cyan-300 hover:text-yellow-400 transition">
+      <svg class="w-6 h-6 mr-1" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+      Back to Home
+    </a>
+  </div>
+
+  <!-- Developer Info -->
+  <section class="text-center pt-6">
+    <div class="mx-auto mb-4 w-40 h-40 rounded-lg overflow-hidden glow-border border-4 border-yellow-400 shadow-lg">
+      <img
+        src="nahom.jpg"
+        alt="Nahom Debebe"
+        class="w-full h-full object-cover"
+      />
+    </div>
+    <h1 class="text-2xl md:text-3xl text-yellow-400 font-semibold">Nahom Debebe</h1>
+    <p class="text-sm text-gray-400 mb-6">Developer of Digital Virtual Lab</p>
+  </section>
+
+  <!-- Contact Section -->
+  <main class="flex flex-col items-center justify-center text-center px-6 py-8 space-y-6">
+    <h2 class="text-2xl text-cyan-300 font-bold">📬 Contact Me</h2>
+
+    <!-- Telegram -->
+    <a href="https://t.me/NahomDebebe" target="_blank"
+       class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow transition duration-200">
+      💬 Telegram: @NahomDebebe
+    </a>
+
+    <!-- Phone -->
+    <div>
+      <button onclick="copyPhone()" 
+              class="px-6 py-3 rounded-lg bg-green-600 hover:bg-green-500 text-white font-semibold shadow transition duration-200">
+        📞 Phone: 0993253633
+      </button>
+      <p id="copied-tip" class="mt-2 text-yellow-400 hidden transition">✔ Number copied to clipboard!</p>
+    </div>
+
+    <!-- Email -->
+    <a href="mailto:nahomdebebe96@gmail.com"
+       class="px-6 py-3 rounded-lg bg-yellow-500 hover:bg-yellow-400 text-slate-900 font-semibold shadow transition duration-200">
+      📧 Email: nahomdebebe96@gmail.com
+    </a>
+  </main>
+
+  <!-- Promotion Section -->
+  <section class="text-center mt-10 px-6">
+    <div class="max-w-2xl mx-auto p-6 bg-gradient-to-br from-yellow-500 to-orange-400 rounded-xl shadow-xl text-slate-900 animate-pulse">
+      <h2 class="text-2xl md:text-3xl font-bold mb-2">🚀 Need a Custom System, Website, or App?</h2>
+      <p class="text-md md:text-lg font-medium mb-4">
+        I'm ready to build your dream project — fast, secure, and modern!
+      </p>
+      <p class="text-sm md:text-base font-semibold">
+        Let’s work together to bring your ideas to life. Whether it’s a management system, an eye-catching website, or a powerful mobile app — I’ve got you covered.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-900 text-center text-xs text-gray-500 py-4 border-t border-slate-700 mt-12">
+    © 2025 | Nahom Debebe
+  </footer>
+
+</body>
+</html>
