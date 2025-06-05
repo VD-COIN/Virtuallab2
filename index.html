@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Logo Screen</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background: radial-gradient(circle at center, #0f0f0f, #000000);
+      color: #00fff7;
+      font-family: 'Courier New', Courier, monospace;
+    }
+
+    .cyber-glow {
+      text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7;
+    }
+
+    .logo-container {
+      box-shadow: 0 0 20px #00fff7, 0 0 40px #00fff7;
+    }
+  </style>
+</head>
+<body class="h-screen w-screen flex flex-col items-center justify-center text-center">
+
+  <!-- Logo Container -->
+  <div class="logo-container bg-black rounded-full w-40 h-40 flex items-center justify-center overflow-hidden border-4 border-cyan-400">
+    <img src="oda1.jpeg" alt="Logo" class="w-full h-full object-cover" />
+  </div>
+
+  <!-- Glowing Texts -->
+  <div class="mt-6">
+    <h1 class="text-2xl md:text-3xl font-bold cyber-glow">ODA SPECIAL BOARDING SCHOOL</h1>
+    <p class="text-md md:text-lg mt-2 cyber-glow text-cyan-300">UNITY FOR DEVELOPMENT</p>
+  </div>
+
+  <!-- Sound Effect -->
+  <audio id="introSound" src="intro.mp3" preload="auto"></audio>
+
+  <!-- JavaScript -->
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const sound = document.getElementById('introSound');
+      sound.play().catch(e => {
+        // Optional: Handle autoplay restrictions
+        console.log('Autoplay failed. Sound will not play automatically.', e);
+      });
+
+      setTimeout(() => {
+        window.location.href = "Transit.html";
+      }, 6000);
+    });
+  </script>
+</body>
+</html>
